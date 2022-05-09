@@ -1,5 +1,24 @@
 module.exports = {
-  monoSidebar: ["concepts-guide", "application-development-guide"],
+  monoSidebar: [
+    "index",
+    {
+      type: "category",
+      label: "Cloud",
+      collapsible: true,
+      collapsed: true,
+      link: {
+        type: "doc",
+        id: "cloud/index",
+      },
+      items: [
+        "cloud/tcloud",
+      ],
+    },
+    "concepts-guide",
+    "application-development-guide",
+    "external-resources",
+    "references/glossary",
+  ],
   sidebarExplained: [
     {
       type: "category",
