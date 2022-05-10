@@ -414,7 +414,8 @@ async function prepToReplace(cfg, link_index) {
 }
 
 async function parseAndReplace(raw_content, link_index, current_guide_id) {
-  const docsLinkRegex = /\/docs\/[a-zA-Z0-9-_]*\/[a-zA-Z0-9-_]*/gm;
+  // const docsLinkRegex = /\/docs\/[a-zA-Z0-9-_]*\/[a-zA-Z0-9-_]*/gm;
+  const docsLinkRegex = /\/[a-zA-Z0-9-_]+[a-zA-Z0-9-_#/]*/gm;
   const lines = raw_content.toString().split("\n");
   let new_lines = [];
   let line_count = 0;
@@ -422,9 +423,10 @@ async function parseAndReplace(raw_content, link_index, current_guide_id) {
     const line_links = line.match(docsLinkRegex);
     if (line_links !== null) {
       for (match of line_links) {
-        const replaceable = match.substring(6);
+        // const replaceable = match.substring(6);
         const link = link_index.find((obj) => {
-          return obj.path === replaceable;
+          console.log(`Index path: ${obj.path} Match: ${match}`);
+          return obj.path === match;
         });
         if (link != undefined) {
           line = await replaceLinks(line, replaceable, link, current_guide_id);

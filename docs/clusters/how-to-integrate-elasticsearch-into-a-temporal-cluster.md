@@ -11,7 +11,7 @@ tags:
 
 To integrate Elasticsearch with your Temporal Cluster, edit the `persistence` section of your `development.yaml` configuration file and run the index schema setup commands.
 
-Elasticsearch is required to support [Advanced Visibility](/docs/concepts/what-is-advanced-visibility).
+Elasticsearch is required to support [Advanced Visibility](/concepts/what-is-advanced-visibility).
 
 :::note
 

@@ -7,8 +7,8 @@ tags:
   - tctl
 ---
 
-The `tctl data-converter` command enables custom [Data Converter](/docs/concepts/what-is-a-data-converter) operations.
+The `tctl data-converter` command enables custom [Data Converter](/concepts/what-is-a-data-converter) operations.
 
 Alias: `dc`
 
-- [`tctl data-converter web`](/docs/tctl/data-converter/web)
+- [`tctl data-converter web`](/tctl/data-converter/web)

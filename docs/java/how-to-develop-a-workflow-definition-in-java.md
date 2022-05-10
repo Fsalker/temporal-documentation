@@ -22,15 +22,15 @@ The Workflow interface is a Java interface and is annotated with `@WorkflowInter
 Each Workflow interface method must have one [`@WorkflowMethod`](#workflowmethod).
 
 Use `@SignalMethod` for Signals, and `@QueryMethod` for Queries in the Workflow.
-See [Signals](/docs/java/signals) and [Queries](/docs/java/queries) for details.
+See [Signals](/java/signals) and [Queries](/java/queries) for details.
 
 Use `ExternalWorkflowStub` to start other Workflow Executions, or send Signals to other running Workflows.
-See [Workflow Execution](/docs/java/how-to-spawn-a-workflow-execution-in-java/#Using`ExternalWorkflowStub`) for details.
+See [Workflow Execution](/java/how-to-spawn-a-workflow-execution-in-java/#Using`ExternalWorkflowStub`) for details.
 
-To call Activities in your Workflow, see [Activity Definition](/docs/java/how-to-develop-an-activity-definition-in-java) and [Activity Execution](/docs/java/how-to-spawn-an-activity-execution-in-java).
+To call Activities in your Workflow, see [Activity Definition](/java/how-to-develop-an-activity-definition-in-java) and [Activity Execution](/java/how-to-spawn-an-activity-execution-in-java).
 
 You can also invoke other Workflows as Child Workflows with `Workflow.newChildWorkflowStub()` or `Workflow.newUntypedChildWorkflowStub()` within a Workflow Definition.
-See [Child Workflow Execution](/docs/java/how-to-spawn-a-child-workflow-execution-in-java) for details.
+See [Child Workflow Execution](/java/how-to-spawn-a-child-workflow-execution-in-java) for details.
 
 The following example shows how to use the annotations in a Workflow interface:
 
@@ -57,9 +57,9 @@ public interface FileProcessingWorkflow {
 
 #### `@WorkflowMethod`
 
-The `@WorkflowMethod` identifies the method that is the starting point of the Workflow Execution. The [Workflow Execution](/docs/concepts/what-is-a-workflow-execution) completes when this method completes.
+The `@WorkflowMethod` identifies the method that is the starting point of the Workflow Execution. The [Workflow Execution](/concepts/what-is-a-workflow-execution) completes when this method completes.
 
-A Workflow Definition interface in Java can have only one method annotated with `@WorkflowMethod`. It can be used to denote the [Workflow Type](/docs/concepts/what-is-a-workflow-type).
+A Workflow Definition interface in Java can have only one method annotated with `@WorkflowMethod`. It can be used to denote the [Workflow Type](/concepts/what-is-a-workflow-type).
 
 The Workflow Type defaults to the short name of the Workflow interface. In the following example, the Workflow Type defaults to "NotifyUserAccounts".
 
@@ -217,7 +217,7 @@ When using untyped `WorkflowStubs`, we rely on the Workflow Type, Activity Type,
 
 Related references:
 
-- [How to spawn a Workflow Execution in Java](/docs/java/how-to-spawn-a-workflow-execution-in-java).
+- [How to spawn a Workflow Execution in Java](/java/how-to-spawn-a-workflow-execution-in-java).
 - `WorkflowStub.java` reference: <https://github.com/temporalio/sdk-java/blob/master/temporal-sdk/src/main/java/io/temporal/client/WorkflowStub.java>
 
 #### Calling other Workflows
@@ -225,7 +225,7 @@ Related references:
 To interact with other running Workflow Executions from within the Workflow, use `ExternalWorkflowStub`.
 To interact with Child Workflows, use `ChildWorkflowStub`.
 
-See [Workflow Execution](/docs/java/how-to-spawn-a-workflow-execution-in-java) and [Child Workflow Execution](/docs/java/how-to-spawn-a-child-workflow-execution-in-java) for details.
+See [Workflow Execution](/java/how-to-spawn-a-workflow-execution-in-java) and [Child Workflow Execution](/java/how-to-spawn-a-child-workflow-execution-in-java) for details.
 
 #### Dynamic Workflows
 
@@ -369,5 +369,5 @@ Java Workflow reference: <https://www.javadoc.io/doc/io.temporal/temporal-sdk/la
 
 #### Workflow Method Arguments
 
-- [What is a Data Converter?](/docs/concepts/what-is-a-data-converter)
+- [What is a Data Converter?](/concepts/what-is-a-data-converter)
 - Java DataConverter reference: <https://www.javadoc.io/doc/io.temporal/temporal-sdk/latest/io/temporal/common/converter/DataConverter.html>
