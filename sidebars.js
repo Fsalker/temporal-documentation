@@ -10,9 +10,7 @@ module.exports = {
         type: "doc",
         id: "cloud/index",
       },
-      items: [
-        "cloud/tcloud",
-      ],
+      items: ["cloud/tcloud"],
     },
     "concepts-guide",
     "application-development-guide",
